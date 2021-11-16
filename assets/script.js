@@ -18,7 +18,10 @@ function selectConsole(val) {
     console.log(selectedConsoleArray);
   }
 }
-/*var bby = require('bestbuy')(APIKey);
-bby.stores('postalCode=55423', {show: 'storeId,storeType,name,city,region'}).then(function(data){
-  console.log(data);
-});*/
+
+var fetchConsoles = function(selectConsole, zipCode) {
+  fetch ("https://api.bestbuy.com/v1/products/4807511/stores.json?postalCode=" + zipcode + "&apiKey=XMAvBzSYr4Q7yiRb5DYdO6b4");
+  console.log(selectConsole);
+  console.log(zipcode);
+}
+
