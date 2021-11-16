@@ -18,7 +18,7 @@ function selectConsole(val) {
     console.log(selectedConsoleArray);
   }
 }
-var bby = require('bestbuy')(APIKey);
+/*var bby = require('bestbuy')(APIKey);
 bby.stores('postalCode=55423', {show: 'storeId,storeType,name,city,region'}).then(function(data){
   console.log(data);
-});
+});*/
