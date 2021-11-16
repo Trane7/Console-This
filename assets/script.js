@@ -1,6 +1,5 @@
 var selectedConsoleArray = [];
 
-<<<<<<< HEAD
 const APIKey = "XMAvBzSYr4Q7yiRb5DYdO6b4";
 
 function selectConsole(val) {
