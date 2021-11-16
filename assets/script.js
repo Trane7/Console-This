@@ -19,15 +19,6 @@ function selectConsole(val) {
   }
 }
 
-var ebay = require('ebay')('https://api.ebay.com/buy/browse/v1/item_summary/search?q=(nintendo-switch, nintendo-switch-lite, nintendo-swithch-oled, playstation-5, xbox-series-x, xbox-series-s')
-// ebay.stores('postalCode=""', {
-//   show: ''
-
-
-
-
-
-
 /*var bby = require('bestbuy')(APIKey);
 bby.stores('postalCode=55423', {show: 'storeId,storeType,name,city,region'}).then(function(data){
   console.log(data);
