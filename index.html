@@ -26,6 +26,7 @@
     <div class="ui equal width horizantally padded grid">
         <div class="row">
           <div class="column">
+              <!--change console IDs to SKU #s-->
               <div id="ninSwitchOG" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)">Nintendo Switch<a href="#" class ="ui medium image"><img src="assets/pics/1280px-Nintendo-Switch-wJoyCons-BlRd-Standing-FL.png"></a></div>
           </div>
           <div class="column">
@@ -60,7 +61,7 @@
               <div class="field">
                 <div class="ui search">
                   <div class="ui icon input">
-                    <input class="prompt" type="text" placeholder="Search Location">
+                    <input id="userZip" class="prompt" type="text" maxlength="5" onkeyup="queryStore()" placeholder="Search Location">
                     <i class="search icon"></i>
                   </div>
                   <div class="results"></div>
@@ -77,13 +78,13 @@
   <div class="ui four column horizantally padded grid">
     <div class="two column row">
       <div class="column">
-          <div class="ui center aligned violet inverted segment">
+          <div id="storeNameLeft" class="ui center aligned violet inverted segment">
               Store Name (link) Address (maps) LEFT
             </div> 
         </div>
 
         <div class="column">
-            <div class="ui center aligned violet inverted segment">
+            <div id="storeNameRight" class="ui center aligned violet inverted segment">
                 Store Name (link) Address (maps) RIGHT
             </div> 
         </div>
@@ -91,13 +92,13 @@
 
     <!--  LEFT  -->
     <div class="column">
-        <div class="ui center aligned violet inverted segment">
+        <div id="consoleNameLeft" class="ui center aligned violet inverted segment">
             (Console name or picture)LEFT
         </div> 
     </div>
 
     <div class="column">
-        <div class="ui center aligned violet inverted segment">
+        <div id="quantityLeft" class="ui center aligned violet inverted segment">
             Quantity
             (link to direct)LEFT
             </div> 
@@ -105,13 +106,13 @@
 
     <!--  RIGHT SIDE  -->
     <div class="column">
-        <div class="ui center aligned violet inverted segment">
+        <div id="consoleNameRight" class="ui center aligned violet inverted segment">
             (Console name or picture) RIGHT           
         </div> 
     </div>
 
     <div class="column">
-        <div class="ui center aligned violet inverted segment">
+        <div id="quantityRight" class="ui center aligned violet inverted segment">
             Quantity
             (link to direct) RIGHT
 
