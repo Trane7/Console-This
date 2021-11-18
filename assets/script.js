@@ -1,4 +1,7 @@
-var selectedConsoleArray = [];
+var selectedConsoleArray = [];//["6430277", "6428324", "6426149", "6470923", "6257135", "6364255"];
+//let sku = selectedConsoleArray.toString() 
+//document.getElementById("skus").innerHTML = sku;
+
 
 const APIKey = "XMAvBzSYr4Q7yiRb5DYdO6b4";
 
@@ -44,6 +47,8 @@ async function queryStore() {
     });
   }
 }
+
+
 
 function parseStoreData(data) {
   //var to hold array list of stores
