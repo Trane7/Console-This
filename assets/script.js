@@ -26,11 +26,12 @@ function selectConsole(val) {
 /**/
 
 async function queryStore() {
+  console.log("queryStore");
   //grab input
   var zipCode = document.getElementById("userZip").value;
   //if statement to check the length of that input
   if (zipCode.length == 5) {
-    var sku = "6430277";
+    var sku = "6469083";
     var apiUrl =
       "https://api.bestbuy.com/v1/products/" +
       sku +
@@ -40,6 +41,7 @@ async function queryStore() {
     fetch(apiUrl).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
+          console.log(data);
           parseStoreData(data);
         });
       }
