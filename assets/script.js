@@ -63,7 +63,8 @@ function parseStoreData(data) {
         var storeNameLeft = document.getElementById("storeNameLeft");
         var consoleNameLeft = document.getElementById("consoleNameLeft");
         var quantityLeft = document.getElementById("quantityLeft");
-        storeNameLeft.innerHTML = "<a href='https://stores.bestbuy.com/ca/elk-grove/9131-w-stockton-blvd-349.html'>" + storesList[0].name + "<br />" + storesList[0].address + "</a>";
+        storeNameLeft.innerHTML = storesList[0].name + "<br />" + storesList[0].address + "<br />" + storesList[0].city + ", " + storesList[0].state + " " + storesList[0].postalCode; 
+        
         consoleNameLeft.innerText = "Xbox Series S";
         quantityLeft.innerHTML = "IN STOCK";
       }
@@ -71,7 +72,7 @@ function parseStoreData(data) {
         var storeNameRight = document.getElementById("storeNameRight");
         var consoleNameRight = document.getElementById("consoleNameRight");
         var quantityRight = document.getElementById("quantityRight");
-        storeNameRight.innerHTML = storesList[1].name + "<br />" + storesList[1].address;
+        storeNameRight.innerHTML = storesList[1].name + "<br />" + storesList[1].address + "<br />" + storesList[1].city + ", " + storesList[1].state + " " + storesList[1].postalCode;
         consoleNameRight.innerText = "Xbox Series S";
         quantityRight.innerHTML = "IN STOCK";
       }
