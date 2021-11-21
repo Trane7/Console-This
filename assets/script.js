@@ -25,8 +25,8 @@ function selectConsole(val) {
 
 /**/
 
-async function queryStore() {
-  console.log("queryStore");
+function queryStore() {
+  // console.log("queryStore");
   //grab input
   var zipCode = document.getElementById("userZip").value;
   //if statement to check the length of that input
@@ -50,19 +50,20 @@ async function queryStore() {
     });
   }
 }
-
+queryStore()
 
 
 function parseStoreData(data) {
   //var to hold array list of stores
   var storesList = data.stores;
+  console.log(storesList);
   if (storesList.length > 0) {
     for (let x in storesList) {
       if (storesList[0]) {
         var storeNameLeft = document.getElementById("storeNameLeft");
         var consoleNameLeft = document.getElementById("consoleNameLeft");
         var quantityLeft = document.getElementById("quantityLeft");
-        storeNameLeft.innerHTML = storesList[0].name + "<br />" + storesList[0].address;
+        storeNameLeft.innerHTML = "<a href='https://stores.bestbuy.com/ca/elk-grove/9131-w-stockton-blvd-349.html'>" + storesList[0].name + "<br />" + storesList[0].address + "</a>";
         consoleNameLeft.innerText = "Xbox Series S";
         quantityLeft.innerHTML = "IN STOCK";
       }
@@ -81,3 +82,58 @@ function parseStoreData(data) {
 
   //provide data to DOM
 }
+
+
+
+
+
+
+// EBAY API!
+var options = {
+  method: 'GET',
+  url: 'https://ebay-product-search-scraper.p.rapidapi.com/index.php',
+  // this is what it is searching for
+  params: {query: 'game_console'},
+  headers: {
+    'x-rapidapi-host': 'ebay-product-search-scraper.p.rapidapi.com',
+    'x-rapidapi-key': 'b92f59801fmsh8a976a850e11445p144c1fjsnab68690b862b'
+  }
+};
+
+
+
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+  var storeNameLeft = document.getElementById("storeNameLeft");
+  var consoleNameLeft = document.getElementById("consoleNameLeft");
+  var quantityLeft = document.getElementById("quantityLeft");
+  storeNameLeft.innerHTML = "<a href= "+ response.data.products[60].link +"> <br /></a>";
+  consoleNameLeft.innerText = "Game Console";
+  quantityLeft.innerHTML = "IN STOCK";
+  for (let i = 0; i < response.data.products.length; i++) {
+    
+    // calling for which console
+    if (response.data.products[i].name.includes("Nintendo Switch")) {
+      console.log(response.data.products[i]);
+    }
+    if (response.data.products[i].name.includes("Nintendo Switch Lite")) {
+      console.log(response.data.products[i]);
+    }
+    if (response.data.products[i].name.includes("Nintendo Switch OLED")) {
+      console.log(response.data.products[i]);
+    }
+    if (response.data.products[i].name.includes("PlayStation 5")) {
+      console.log(response.data.products[i]);
+    }
+    if (response.data.products[i].name.includes("Xbox Series X")) {
+      console.log(response.data.products[i]);
+    }
+    if (response.data.products[i].name.includes("Xbox Series S 512GB")) {
+      console.log(response.data.products[i]);
+    }
+  }
+  console.log(response.data.products[60].link);
+}).catch(function (error) {
+	console.error(error);
+});

@@ -14,7 +14,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" 
     integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" 
     crossorigin="anonymous"/> 
-    <script src ="assets/script.js"></script>
+   
     <style>
       html,
       body {
@@ -185,6 +185,147 @@
         padding: 0;
       }
     </style>
+    
+  </head>
+  <body>
+    <header class="ui segment">
+        <h1 class = "ui center aligned header">
+            CONSOLE THIS
+        </h1>
+        <p class = "ui center aligned purple header"> Making gaming easier to find and enjoy!</p>
+    </header>
+
+    <!--     CONSOLES      -->
+    <div class="ui equal width horizantally padded  middle aligned grid">
+        <div class="row">
+          <div   class="column">
+              <!--change console IDs to SKU #s-->
+              <div style="height: 220px;" id="6364255" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)"><p>Nintendo Switch</p><a href="#" class ="ui image"><img style="height:150px; " src="assets/pics/1280px-Nintendo-Switch-wJoyCons-BlRd-Standing-FL.png"></a></div>
+          </div>
+          <div class="column">
+              <div style="height: 220px;" id="6257135" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)"><p>Nintendo Switch Lite</p><a href="#" class ="ui image"><img style="height:150px; " src="assets/pics/NSwitch_SwitchLite_Home_Menu_Hardware.png"></a></div>
+          </div>
+          <div class="column">
+              <div style="height: 220px;" id="6470923" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)"><p>Nintendo Switch OLED</p><a href="#" class="ui image"><img style="height:150px; " src="assets/pics/Nintendo_Switch_OLED.png" /></a>  </div>
+          </div>
+          <div class="column">
+              <div style="height: 220px;" id="6426149" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)"><p>Playstation 5</p><a href="#" class="ui image"><img style="height:150px; " href src="assets/pics/playstation-5-with-dualsense-front-product-shot-01-ps5-en-30jul20.png" /></a></div>
+          </div>
+          <div class="column">
+              <div style="height: 220px;" id="6428324" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)"><p>Xbox Series X</p><a href="#" class ="ui image"><img style="height:150px; " src="assets/pics/xboxx.png"></a></div>
+          </div>
+          <div class="column">
+              <div style="height: 220px;" id="6430277" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)"><p>Xbox Series S</p><a href="#" class ="ui image"><img style="height:150px; " src="assets/pics/fcb5fbdf-009b-4a09-8850-e2825a84f89a.png"></a></div>
+            </div>
+        </div>    
+    </div>
+    <div id="map-container">
+        <div id="locations-panel">
+          <div id="locations-panel-list">
+            <header>
+              <h1 class="search-title">
+                <img src="https://fonts.gstatic.com/s/i/googlematerialicons/place/v15/24px.svg"/>
+                Find a location near you
+              </h1>
+              <div class="search-input">
+                <input id="userZip" onkeyup="queryStore()" placeholder="Enter your address or zip code">
+                <div id="search-overlay-search" class="search-input-overlay search">
+                  <button id="location-search-button">
+                    <img class="icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/search/v11/24px.svg" alt="Search"/>
+                  </button>
+                </div>
+              </div>
+            </header>
+            <div class="section-name" id="location-results-section-name">
+              All locations
+            </div>
+            <div class="results">
+              <ul id="location-results-list"></ul>
+            </div>
+          </div>
+        </div>
+        <div id="map"></div>
+      </div>    
+
+    <!-- STORE LINKS & ADDRESS -->
+  <div class="ui four column horizantally padded grid">
+    <div class="two column row">
+      <div class="column">
+          <div id="storeNameLeft" class="ui center aligned violet inverted segment">
+              
+              <a href="https://stores.bestbuy.com/ca/elk-grove/9131-w-stockton-blvd-349.html">
+                Store Name (link) Address (maps) LEFT
+              </a>
+            </div> 
+        </div>
+
+        <div class="column">
+            <div id="storeNameRight" class="ui center aligned violet inverted segment">
+                Store Name (link) Address (maps) RIGHT
+            </div> 
+        </div>
+    </div>
+
+    <!--  LEFT  -->
+    <div class="column">
+        <div id="consoleNameLeft" class="ui center aligned violet inverted segment">
+            (Console name or picture)LEFT
+        </div> 
+    </div>
+
+    <div class="column">
+        <div id="quantityLeft" class="ui center aligned violet inverted segment">
+            Quantity
+            (link to direct)LEFT
+            </div> 
+    </div>
+
+    <!--  RIGHT SIDE  -->
+    <div class="column">
+        <div id="consoleNameRight" class="ui center aligned violet inverted segment">
+            (Console name or picture) RIGHT           
+        </div> 
+    </div>
+
+    <div class="column">
+        <div id="quantityRight" class="ui center aligned violet inverted segment">
+            Quantity
+            (link to direct) RIGHT
+
+        </div> 
+    </div>
+    <!--  LEFT 
+    <div class="column">
+        <div class="ui center aligned violet inverted segment">
+            (Console name or picture)LEFT
+        </div> 
+    </div>
+
+    <div class="column">
+        <div class="ui center aligned violet inverted segment">
+            Quantity
+            (link to direct) LEFT
+        </div> 
+    </div>
+
+    <!--  RIGHT 
+    <div class="column">
+        <div class="ui center aligned violet inverted segment">
+            (Console name or picture) RIGHT
+
+        </div> 
+    </div>
+
+    <div class="column">
+        <div class="ui center aligned violet inverted segment">
+            Quantity
+            (link to direct) RIGHT
+        -->
+        </div> 
+    </div>
+
+  </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAB6_XNjw9zwRp8ZiuKxiY7X89-I-ZMto&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
     <script>
       'use strict';
 
@@ -505,142 +646,9 @@
         </li>
       {{/each}}
     </script>
-  </head>
-  <body>
-    <header class="ui segment">
-        <h1 class = "ui center aligned header">
-            CONSOLE THIS
-        </h1>
-        <p class = "ui center aligned purple header"> Making gaming easier to find and enjoy!</p>
-    </header>
-
-    <!--     CONSOLES      -->
-    <div class="ui equal width horizantally padded  middle aligned grid">
-        <div class="row">
-          <div   class="column">
-              <!--change console IDs to SKU #s-->
-              <div style="height: 220px;" id="6364255" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)"><p>Nintendo Switch</p><a href="#" class ="ui image"><img style="height:150px; " src="assets/pics/1280px-Nintendo-Switch-wJoyCons-BlRd-Standing-FL.png"></a></div>
-          </div>
-          <div class="column">
-              <div style="height: 220px;" id="6257135" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)"><p>Nintendo Switch Lite</p><a href="#" class ="ui image"><img style="height:150px; " src="assets/pics/NSwitch_SwitchLite_Home_Menu_Hardware.png"></a></div>
-          </div>
-          <div class="column">
-              <div style="height: 220px;" id="6470923" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)"><p>Nintendo Switch OLED</p><a href="#" class="ui image"><img style="height:150px; " src="assets/pics/Nintendo_Switch_OLED.png" /></a>  </div>
-          </div>
-          <div class="column">
-              <div style="height: 220px;" id="6426149" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)"><p>Playstation 5</p><a href="#" class="ui image"><img style="height:150px; " href src="assets/pics/playstation-5-with-dualsense-front-product-shot-01-ps5-en-30jul20.png" /></a></div>
-          </div>
-          <div class="column">
-              <div style="height: 220px;" id="6428324" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)"><p>Xbox Series X</p><a href="#" class ="ui image"><img style="height:150px; " src="assets/pics/xboxx.png"></a></div>
-          </div>
-          <div class="column">
-              <div style="height: 220px;" id="6430277" class="ui center aligned purple inverted segment" onclick="selectConsole(this.id)"><p>Xbox Series S</p><a href="#" class ="ui image"><img style="height:150px; " src="assets/pics/fcb5fbdf-009b-4a09-8850-e2825a84f89a.png"></a></div>
-            </div>
-        </div>    
-    </div>
-    <div id="map-container">
-        <div id="locations-panel">
-          <div id="locations-panel-list">
-            <header>
-              <h1 class="search-title">
-                <img src="https://fonts.gstatic.com/s/i/googlematerialicons/place/v15/24px.svg"/>
-                Find a location near you
-              </h1>
-              <div class="search-input">
-                <input id="userZip" onkeyup="queryStore()" placeholder="Enter your address or zip code">
-                <div id="search-overlay-search" class="search-input-overlay search">
-                  <button id="location-search-button">
-                    <img class="icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/search/v11/24px.svg" alt="Search"/>
-                  </button>
-                </div>
-              </div>
-            </header>
-            <div class="section-name" id="location-results-section-name">
-              All locations
-            </div>
-            <div class="results">
-              <ul id="location-results-list"></ul>
-            </div>
-          </div>
-        </div>
-        <div id="map"></div>
-      </div>    
-
-    <!-- STORE LINKS & ADDRESS -->
-  <div class="ui four column horizantally padded grid">
-    <div class="two column row">
-      <div class="column">
-          <div id="storeNameLeft" class="ui center aligned violet inverted segment">
-              Store Name (link) Address (maps) LEFT
-            </div> 
-        </div>
-
-        <div class="column">
-            <div id="storeNameRight" class="ui center aligned violet inverted segment">
-                Store Name (link) Address (maps) RIGHT
-            </div> 
-        </div>
-    </div>
-
-    <!--  LEFT  -->
-    <div class="column">
-        <div id="consoleNameLeft" class="ui center aligned violet inverted segment">
-            (Console name or picture)LEFT
-        </div> 
-    </div>
-
-    <div class="column">
-        <div id="quantityLeft" class="ui center aligned violet inverted segment">
-            Quantity
-            (link to direct)LEFT
-            </div> 
-    </div>
-
-    <!--  RIGHT SIDE  -->
-    <div class="column">
-        <div id="consoleNameRight" class="ui center aligned violet inverted segment">
-            (Console name or picture) RIGHT           
-        </div> 
-    </div>
-
-    <div class="column">
-        <div id="quantityRight" class="ui center aligned violet inverted segment">
-            Quantity
-            (link to direct) RIGHT
-
-        </div> 
-    </div>
-    <!--  LEFT 
-    <div class="column">
-        <div class="ui center aligned violet inverted segment">
-            (Console name or picture)LEFT
-        </div> 
-    </div>
-
-    <div class="column">
-        <div class="ui center aligned violet inverted segment">
-            Quantity
-            (link to direct) LEFT
-        </div> 
-    </div>
-
-    <!--  RIGHT 
-    <div class="column">
-        <div class="ui center aligned violet inverted segment">
-            (Console name or picture) RIGHT
-
-        </div> 
-    </div>
-
-    <div class="column">
-        <div class="ui center aligned violet inverted segment">
-            Quantity
-            (link to direct) RIGHT
-        -->
-        </div> 
-    </div>
-
-  </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAB6_XNjw9zwRp8ZiuKxiY7X89-I-ZMto&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src ="assets/script.js"></script>
   </body>
 </html>
