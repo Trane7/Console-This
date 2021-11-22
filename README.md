@@ -11,3 +11,4 @@
 **WHEN I** find a console type and when I find a location.  
 **THEN I** can go to the closest store or purchase online.  
 
+![2021-11-21 21_31_47-](https://user-images.githubusercontent.com/17996569/142806178-1a562cd3-a414-4ae3-80c5-3162cd42e73f.png)
