@@ -1,4 +1,4 @@
-var selectedConsoleArray = [];//["6430277", "6428324", "6426149", "6470923", "6257135", "6364255"];
+var selectedConsoleArray = [];//"6430277", "6428324", "6426149", "6470923", "6257135", "6364255"];
 //let sku = selectedConsoleArray.toString() 
 //document.getElementById("skus").innerHTML = sku;
 
@@ -31,7 +31,7 @@ function queryStore() {
   var zipCode = document.getElementById("userZip").value;
   //if statement to check the length of that input
   if (zipCode.length == 5) {
-    var sku = "6469083";
+    var sku = "6452232";
     var apiUrl =
       "https://api.bestbuy.com/v1/products/" +
       sku +
@@ -60,22 +60,24 @@ function parseStoreData(data) {
   if (storesList.length > 0) {
     for (let x in storesList) {
       if (storesList[0]) {
-        var storeNameLeft = document.getElementById("storeNameLeft");
-        var consoleNameLeft = document.getElementById("consoleNameLeft");
-        var quantityLeft = document.getElementById("quantityLeft");
+        var storeNameLeft = document.getElementById("rowOneLocation");
+        var consoleNameLeft = document.getElementById("console");
+        var quantityLeft = document.getElementById("rowOnePrice");
+        var inStock = document.getElementById("rowOneBestBuy");
         storeNameLeft.innerHTML = storesList[0].name + "<br />" + storesList[0].address + "<br />" + storesList[0].city + ", " + storesList[0].state + " " + storesList[0].postalCode; 
         
         consoleNameLeft.innerText = "Xbox Series S";
-        quantityLeft.innerHTML = "IN STOCK";
+        quantityLeft.innerHTML = "19.99";
+        inStock.innerHTML = "IN STOCK";
       }
-      if (storesList[1]) {
+ /*     if (storesList[1]) {
         var storeNameRight = document.getElementById("storeNameRight");
         var consoleNameRight = document.getElementById("consoleNameRight");
         var quantityRight = document.getElementById("quantityRight");
         storeNameRight.innerHTML = storesList[1].name + "<br />" + storesList[1].address + "<br />" + storesList[1].city + ", " + storesList[1].state + " " + storesList[1].postalCode;
         consoleNameRight.innerText = "Xbox Series S";
         quantityRight.innerHTML = "IN STOCK";
-      }
+      } */
     }
   } //else show user error no stores
 
@@ -112,8 +114,35 @@ axios.request(options).then(function (response) {
   storeNameLeft.innerHTML = "<a href= "+ response.data.products[60].link +"> <br /></a>";
   consoleNameLeft.innerText = "Game Console";
   quantityLeft.innerHTML = "IN STOCK";
-  for (let i = 0; i < response.data.products.length; i++) {
-    
+  for (let i = 60; i < response.data.products.length; i++) {
+    //---Two---
+    var consoleTwoName = response.data.products[60].name;
+    var consoleTwoPrice = response.data.products[60].price;
+    var consoleTwoResults = response.data.products[60].link;
+    document.getElementById("console2").innerText = consoleTwoName;
+    document.getElementById("rowTwoPrice").innerText = consoleTwoPrice;
+    document.getElementById("rowTwoEbay").innerText = consoleTwoResults;
+    //---Three
+    var consoleThreeName = response.data.products[61].name;
+    var consoleThreePrice = response.data.products[61].price;
+    var consoleThreeResults = response.data.products[61].link;
+    document.getElementById("console3").innerText = consoleThreeName;
+    document.getElementById("rowThreePrice").innerText = consoleThreePrice;
+    document.getElementById("rowThreeEbay").innerText = consoleThreeResults;
+    //---Four
+    var consoleFourName = response.data.products[62].name;
+    var consoleFourPrice = response.data.products[62].price;
+    var consoleFourResults = response.data.products[62].link;
+    document.getElementById("console4").innerText = consoleFourName;
+    document.getElementById("rowFourPrice").innerText = consoleFourPrice;
+    document.getElementById("rowFourEbay").innerText = consoleFourResults;
+    //---Five
+    var consoleFiveName = response.data.products[63].name;
+    var consoleFivePrice = response.data.products[63].price;
+    var consoleFiveResults = response.data.products[63].link;
+    document.getElementById("console5").innerText = consoleFiveName;
+    document.getElementById("rowFivePrice").innerText = consoleFivePrice;
+    document.getElementById("rowFiveEbay").innerText = consoleFiveResults;
     // calling for which console
     if (response.data.products[i].name.includes("Nintendo Switch")) {
       console.log(response.data.products[i]);
@@ -124,7 +153,7 @@ axios.request(options).then(function (response) {
     if (response.data.products[i].name.includes("Nintendo Switch OLED")) {
       console.log(response.data.products[i]);
     }
-    if (response.data.products[i].name.includes("PlayStation 5")) {
+    if (response.data.products[i].name.includes("PlayStation 5", "ps5", "sony playstation 5")) {
       console.log(response.data.products[i]);
     }
     if (response.data.products[i].name.includes("Xbox Series X")) {

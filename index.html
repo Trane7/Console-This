@@ -245,8 +245,102 @@
           </div>
         </div>
         <div id="map"></div>
-      </div>    
-
+      </div> 
+      <!-- Table -->   
+      <table class="ui celled padded table">
+        <thead>
+          <tr><th class="single line">Console</th>
+          <th>Best Buy</th>
+          <th>Location</th>
+          <th>Price</th>
+          <th>Ebay Results</th>
+        </tr></thead>
+        <tbody>
+          <tr id="rowOne">
+            <td>
+              <h2 id="console" class="ui center aligned header"></h2>
+            </td>
+            <td id="rowOneBestBuy" class="single line">
+              
+            </td>
+            <td id="rowOneLocation">
+            </td>
+            <td id="rowOnePrice" class="right aligned">
+              <br>
+              <a href="#"></a>
+            </td>
+            <td id="rowOneEbay"></td>
+          </tr>
+          <tr id="rowTwo">
+            <td>
+              <h2 id="console2" class="ui center aligned header"></h2>
+            </td>
+            <td id="rowTwoBestBuy" class="single line">
+              
+            </td>
+            <td id="rowTwoLocation">
+              <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+            </td>
+            <td id="rowTwoPrice" class="right aligned">
+              <br>
+              <a href="#"></a>
+            </td>
+            <td id="rowTwoEbay"></td>
+          </tr>
+          <tr>
+            <td>
+              <h2 id="console3" class="ui center aligned header"></h2>
+            </td>
+            <td id="rowThreeBestBuy" class="single line">
+              
+            </td>
+            <td id="rowThreeLocation">
+              
+            </td>
+            <td id="rowThreePrice" class="right aligned">
+              <br>
+              <a href="#"></a>
+            </td>
+            <td id="rowThreeEbay"></td>
+          </tr>
+          <tr>
+            <td>
+              <h2 id="console4" class="ui center aligned header"></h2>
+            </td>
+            <td id="rowFourBestBuy" class="single line">
+              
+            </td>
+            <td id="rowFourLocation">
+              
+            </td>
+            <td id="rowFourPrice" class="right aligned">
+             <br>
+              <a href="#"></a>
+            </td>
+            <td id="rowFourEbay"></td>
+          </tr>
+          <tr>
+            <td>
+              <h2 id="console5" class="ui center aligned header"></h2>
+            </td>
+            <td id="rowFiveBestBuy" class="single line">
+             
+            </td>
+            <td id="rowFiveLocation">
+              
+            </td>
+            <td id="rowFivePrice" class="right aligned">
+             <br>
+              <a href="#"></a>
+            </td>
+            <td id="rowFiveEbay"></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr><th colspan="5">
+          </th>
+        </tr></tfoot>
+      </table>
     <!-- STORE LINKS & ADDRESS -->
   <div class="ui four column horizantally padded grid">
     <div class="two column row">
@@ -626,7 +720,7 @@
           {"title":"Best Buy","address1":"1760 Grass Valley Hwy","address2":"Auburn, CA 95603, USA","coords":{"lat":38.92913812417697,"lng":-121.08625147790984},"placeId":"ChIJI0c1R6kam4ARPapD1jZ3hK4"}
         ],
         "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17},
-        "mapsApiKey": "AIzaSyBAB6_XNjw9zwRp8ZiuKxiY7X89-I-ZMto"
+        "mapsApiKey": "AIzaSyCMhqG2wDyKCmLZmse8QQHaJS51gX4zp-8"
       };
 
       function initMap() {
@@ -654,7 +748,6 @@
   </head>
   
   </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAB6_XNjw9zwRp8ZiuKxiY7X89-I-ZMto&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
->>>>>>> 94313011e3785bac74f11ac05b187a3eff93f991
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMhqG2wDyKCmLZmse8QQHaJS51gX4zp-8&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>-->
   </body>
 </html>
